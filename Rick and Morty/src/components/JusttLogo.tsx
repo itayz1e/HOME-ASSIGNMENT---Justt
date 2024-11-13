@@ -1,6 +1,6 @@
 import "../style/Logo.scss"
 import logo from "../assets/Group 629.png";
-function JusttLogo() {
+function JusttLogo0() {
   return (
     <div className="logo">
       <img src={logo} alt="" />
@@ -8,4 +8,4 @@ function JusttLogo() {
   )
 }
 
-export default JusttLogo
+export default JusttLogo0
