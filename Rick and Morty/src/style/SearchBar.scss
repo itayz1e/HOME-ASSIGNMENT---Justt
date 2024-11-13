@@ -1,0 +1,76 @@
+.main_search_container {
+//   display: flex;
+//   flex-direction: row;
+
+  .search_container {
+    width: 1364px;
+    height: 107px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: rgba(239, 239, 244, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // margin-right: 10px; /* רווח קטן בין הדיבים */
+
+  }
+  .search_input {
+    width: 481px;
+    height: 46px;
+    margin: 12px;
+    padding: 10px 30px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    // border-radius: 20px;
+  }
+
+  .search_icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    margin-left: 20rem;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+  }
+
+  .search_icon::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-top: 3px solid black;
+    transform: rotate(45deg);
+    top: 25px;
+    left: 15px;
+  }
+
+  .search_button {
+    width: 100px;
+    height: 68px;
+    top: 569px;
+    left: 1201px;
+    padding: 12px 0px 12px 35px;
+    gap: 8px;
+    border-radius: 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background-color: rgba(67, 16, 174, 1);
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.75px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    cursor: pointer;
+  }
+}

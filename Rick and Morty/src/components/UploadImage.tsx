@@ -1,7 +1,7 @@
 import "../style/UploadImage.scss";
 import upLoading from "../assets/Group 1.png";
 
-function UploadImage() {
+const UploadImage= () => {
   return (
     <div className="upLoading">
       <div className="image">

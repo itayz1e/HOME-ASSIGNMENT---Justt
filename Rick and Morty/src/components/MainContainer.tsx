@@ -1,7 +1,8 @@
 import "../style/MainContainer.scss";
 import CharacterTable from "./CharacterTable";
+import SearchBar from "./SearchBar";
 
-function MainContainer() {
+const MainContainer = () => {
   return (
     <div className="container">
       <div className="container_buttons">
@@ -11,6 +12,9 @@ function MainContainer() {
         <button className="left">
           <p>PICK A CHARACTER</p>
         </button>
+      </div>
+      <div>
+      <SearchBar />
       </div>
       <div>
       <CharacterTable />
