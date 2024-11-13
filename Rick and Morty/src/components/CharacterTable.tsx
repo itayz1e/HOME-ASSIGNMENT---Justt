@@ -5,22 +5,29 @@ const characters = [
   { id: 1, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 2, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 3, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 4, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 5, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 4, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 5, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 6, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 7, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 7, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 8, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 9, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 9, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 10, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 11, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 11, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
   { id: 12, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
-  { id: 13, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 13, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 14, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 15, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 16, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 17, name: "Morty Smith", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 18, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
+  { id: 19, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
+  { id: 20, name: "Superman", species: "Kryptonian", status: "Alive", origin: "Krypton", gender: "Male" },
 ];
 
 
 const CharacterTable = () => {
   return (
-    <div className="main_table">
+    <div className="table">
       <table>
         <thead>
           <tr>
