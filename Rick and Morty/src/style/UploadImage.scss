@@ -1,0 +1,38 @@
+.upLoading {
+  width: 1920px;
+  height: 217px;
+  gap: 0px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+  background: #efeff4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .image {
+    width: 153px;
+    height: 74px;
+    top: 61px;
+    left: 883px;
+    gap: 0px;
+    opacity: 0px;
+
+    p {
+      width: 153px;
+      height: 74px;
+      top: 61px;
+      left: 883px;
+      gap: 0px;
+      opacity: 10px;
+      
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18.75px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
