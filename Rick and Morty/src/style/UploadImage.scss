@@ -5,10 +5,7 @@
   border: 2px 0px 0px 0px;
   opacity: 0px;
   background: #efeff4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
 
   .image {
     width: 153px;
@@ -17,6 +14,7 @@
     left: 883px;
     gap: 0px;
     opacity: 0px;
+  position: relative;    
 
     p {
       width: 153px;
