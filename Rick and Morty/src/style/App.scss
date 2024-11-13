@@ -5,24 +5,8 @@
   left: -5235px;
   gap: 0px;
   opacity: 0px;
-  background-color: aqua;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
 
-  .upLoading {
-    width: 1920px;
-    height: 217px;
-    gap: 0px;
-    border: 2px 0px 0px 0px;
-    opacity: 0px;
-    background: #dadaf7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .image {
-      width: 153px;
-      height: 74px;
-      opacity: 0px;
-      border: 2px solid red;
-    }
-  }
 }
