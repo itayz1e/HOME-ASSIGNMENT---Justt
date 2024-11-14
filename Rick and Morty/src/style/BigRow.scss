@@ -1,0 +1,41 @@
+.big_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.character_image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.character_details {
+  display: flex;
+  flex-direction: column;
+  color: rgba(67, 16, 174, 1);
+}
+
+strong {
+  color: gray;
+}
+
+.character_details h4 {
+  margin-bottom: 20px;
+}
+
+.details_grid {
+  gap: 0px;
+  border: 1px 0px 0px 0px solid red;
+  opacity: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 105px 90px;
+  width: 100%;
+}
+
+.details_grid p {
+  margin: 0;
+}
