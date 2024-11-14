@@ -4,14 +4,14 @@ table {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: rgba(239, 239, 244, 1);
-  
+
   button {
     background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
   }
-  
+
   button:focus {
     outline: none;
   }
@@ -22,15 +22,14 @@ table {
     gap: 0px;
     opacity: 0px;
   }
-  
+
   th {
     background-color: rgba(32, 0, 98, 1);
     color: #ffffff;
   }
-  
+
   tr:nth-child(even) {
     background: rgba(245, 240, 255, 1);
-    
   }
   tr:nth-child(odd) {
     background: rgba(255, 255, 255, 1);
@@ -83,4 +82,16 @@ table {
     opacity: 0px;
   }
 
+  .no_results {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .noSearch {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

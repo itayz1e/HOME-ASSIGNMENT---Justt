@@ -1,5 +1,8 @@
 import ArrowIcon from "../assets/ArrowIcon";
 import "../style/CharacterTable.scss";
+import noSearch from "../assets/Group 204.png";
+import noSearchText from "../assets/Search for a character i.d in order to view a character.png";
+import { CharacterTableProps } from "../assets/types/interface";
 
 const characters = [
   { id: 1, name: "Rick Sanchez", species: "Human", status: "Alive", origin: "Earth", gender: "Male" },
@@ -25,7 +28,9 @@ const characters = [
 ];
 
 
-const CharacterTable = () => {
+const CharacterTable = ({ isEmptyTable }: CharacterTableProps) => {
+  const displayedCharacters = isEmptyTable ? [] : characters;
+
   return (
     <div className="table">
       <table>
@@ -41,19 +46,32 @@ const CharacterTable = () => {
           </tr>
         </thead>
         <tbody>
-          {characters.map((character, index) => (
-            <tr key={index}>
-              <td>{character.id}</td>
-              <td>{character.name}</td>
-              <td>{character.species || "-"}</td>
-              <td>{character.status || "-"}</td>
-              <td>{character.origin || "-"}</td>
-              <td>{character.gender || "-"}</td>
-              <button>
-                <ArrowIcon />
-              </button>
+          {displayedCharacters.length === 0 ? (
+            <tr>
+              <td colSpan={7} className="no-results">
+                <div className="noSearch">
+                  <img src={noSearch} alt="No results" />
+                  <img src={noSearchText} alt="Search prompt" />
+                </div>
+              </td>
             </tr>
-          ))}
+          ) : (
+            displayedCharacters.map((character, index) => (
+              <tr key={index}>
+                <td>{character.id}</td>
+                <td>{character.name}</td>
+                <td>{character.species || "-"}</td>
+                <td>{character.status || "-"}</td>
+                <td>{character.origin || "-"}</td>
+                <td>{character.gender || "-"}</td>
+                <td>
+                  <button>
+                    <ArrowIcon />
+                  </button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
