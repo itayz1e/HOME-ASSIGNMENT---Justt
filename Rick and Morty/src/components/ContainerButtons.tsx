@@ -1,4 +1,4 @@
-import { ContainerButtonsProps } from "../assets/types/interface";
+import { ContainerButtonsProps } from "../types/interface";
 
 const ContainerButtons = ({ setIsEmptyTable }: ContainerButtonsProps) => {
   return (
