@@ -1,6 +1,6 @@
 import "../style/Logo.scss"
 import logo from "../assets/Group 629.png";
-const JusttLogo0 = () => {
+const JusttLogo = () => {
   return (
     <div className="logo">
       <img src={logo} alt="" />
@@ -8,4 +8,4 @@ const JusttLogo0 = () => {
   )
 }
 
-export default JusttLogo0
+export default JusttLogo

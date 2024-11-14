@@ -1,23 +1,29 @@
+import { useState } from "react";
 import "../style/MainContainer.scss";
 import CharacterTable from "./CharacterTable";
+import ContainerButtons from "./ContainerButtons";
 import SearchBar from "./SearchBar";
 
 const MainContainer = () => {
+  const [isEmptyTable, setIsEmptyTable] = useState(false);
+
+  const handlePickCharacterClick = () => setIsEmptyTable(true);
+  const handleBrowseClick = () => setIsEmptyTable(false);
+
   return (
     <div className="container">
-      <div className="container_buttons">
-        <button className="right">
-          <p>BROWSE</p>
-        </button>
-        <button className="left">
-          <p>PICK A CHARACTER</p>
-        </button>
+      <div>
+        <ContainerButtons
+         setIsEmptyTable={setIsEmptyTable} 
+         onPickCharacterClick={handlePickCharacterClick}
+         onBrowseClick={handleBrowseClick}
+         />
       </div>
       <div>
-      <SearchBar />
+        <SearchBar />
       </div>
       <div>
-      <CharacterTable />
+        <CharacterTable isEmptyTable={isEmptyTable} />
       </div>
     </div>
   );
