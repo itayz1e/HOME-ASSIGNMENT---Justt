@@ -1,24 +1,25 @@
-import React from 'react'
+type TableBarProps = {
+  tbody: React.ReactNode;
+};
 
-const TableBar = ({tbody}:any) => {
+const TableBar: React.FC<TableBarProps> = ({ tbody }) => {
   return (
     <table>
-    <thead>
-      <tr>
-        <th>I.d</th>
-        <th>Name</th>
-        <th>Species</th>
-        <th>Status</th>
-        <th>Origin</th>
-        <th>Gender</th>
-        <th>More</th>
-      </tr>
-    </thead>
-    <tbody>
-        {tbody}
-    </tbody>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Species</th>
+          <th>Status</th>
+          <th>Origin</th>
+          <th>Gender</th>
+          <th>More</th>
+        </tr>
+      </thead>
+      <tbody>{tbody}</tbody>
     </table>
-  )
-}
+  );
+};
 
-export default TableBar
+export default TableBar;
+
