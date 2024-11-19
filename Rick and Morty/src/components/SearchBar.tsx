@@ -19,13 +19,10 @@ const SearchBar = () => {
   });
 
   const handleSearch = async () => {
-    if (searchId.trim()) {
-      const result = await refetch();
-      console.log("Refetch Result:", result);
-      console.log();
-      setSearchId("");
+    if (searchId) {
+      await refetch();
     } else {
-      alert("Please enter a character ID.");
+      console.error("Please enter a character ID.");
     }
   };
 
