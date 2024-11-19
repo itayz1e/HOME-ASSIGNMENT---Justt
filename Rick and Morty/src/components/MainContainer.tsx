@@ -3,27 +3,25 @@ import "../style/MainContainer.scss";
 import CharacterTable from "./CharacterTable";
 import ContainerButtons from "./ContainerButtons";
 import SearchBar from "./SearchBar";
+import CharacterCard from "./CharacterCard";
 
 const MainContainer = () => {
-  const [isEmptyTable, setIsEmptyTable] = useState(false);
-
-  const handlePickCharacterClick = () => setIsEmptyTable(true);
-  const handleBrowseClick = () => setIsEmptyTable(false);
+  const [activeComponent, setActiveComponent] = useState< "BROWSE" | "PICK" | null>(null);
 
   return (
     <div className="container">
       <div>
-        <ContainerButtons
-         setIsEmptyTable={setIsEmptyTable} 
-         onPickCharacterClick={handlePickCharacterClick}
-         onBrowseClick={handleBrowseClick}
-         />
+      <ContainerButtons
+          onShowBrowse={() => setActiveComponent("BROWSE")}
+          onShowPickCard={() => setActiveComponent("PICK")}
+        />
       </div>
       <div>
         <SearchBar />
       </div>
       <div>
-        <CharacterTable isEmptyTable={isEmptyTable} />
+        {activeComponent === "BROWSE" && <CharacterTable />}
+        {activeComponent === "PICK" && <CharacterCard />}
       </div>
     </div>
   );
