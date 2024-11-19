@@ -21,6 +21,7 @@ const SearchBar = () => {
   const handleSearch = async () => {
     if (searchId) {
       await refetch();
+      setSearchId("");
     } else {
       console.error("Please enter a character ID.");
     }
@@ -33,7 +34,7 @@ const SearchBar = () => {
         <input
           type="text"
           className="search_input"
-          placeholder="Browse for characters..."
+          placeholder="Search for character I.d"
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
         />

@@ -3,7 +3,6 @@
   height: 1208px;
   opacity: 0px;
 
-
   p {
     font-size: 16px;
   }
@@ -36,11 +35,15 @@
     }
   }
 
-  .box-content{
+  .box-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    h1 {
+      color: rgba(161, 161, 161, 1);
+    }
   }
 }

@@ -1,3 +1,5 @@
+import "../style/CharacterCard.scss";
+
 type TableBarProps = {
   tbody: React.ReactNode;
 };

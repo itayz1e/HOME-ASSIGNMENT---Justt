@@ -48,7 +48,7 @@ const CharacterTable = () => {
       ) : error ? (
         <tr>
           <td colSpan={7} className="no-results">
-            <div >
+            <div>
               <img src={noSearch} alt="No results" />
               <h1>Search for a character</h1>
             </div>

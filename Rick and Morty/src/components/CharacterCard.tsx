@@ -2,6 +2,7 @@ import React from "react";
 import BigRow from "./BigRow";
 import ArrowIcon from "../assets/ArrowIcon";
 import TableBar from "./TableBar";
+import noSearch from "../assets/Group 204.png";
 
 const CharacterCard = () => {
   return (
@@ -31,6 +32,10 @@ const CharacterCard = () => {
             </>
           }
         />
+        <div>
+          <img src={noSearch} alt="No results" />
+          <h1>Search for a character</h1>
+        </div>
       </div>
     </div>
   );
