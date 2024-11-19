@@ -4,6 +4,7 @@ import CharacterTable from "./CharacterTable";
 import ContainerButtons from "./ContainerButtons";
 import SearchBar from "./SearchBar";
 import CharacterCard from "./CharacterCard";
+import  '../style/CharacterTable.scss'
 
 const MainContainer = () => {
   const [activeComponent, setActiveComponent] = useState< "BROWSE" | "PICK" | null>(null);
@@ -19,7 +20,7 @@ const MainContainer = () => {
       <div>
         <SearchBar />
       </div>
-      <div>
+      <div className="box-content">
         {activeComponent === "BROWSE" && <CharacterTable />}
         {activeComponent === "PICK" && <CharacterCard />}
       </div>
