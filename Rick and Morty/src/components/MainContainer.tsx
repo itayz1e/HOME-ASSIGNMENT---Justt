@@ -7,7 +7,7 @@ import CharacterCard from "./CharacterCard";
 import  '../style/CharacterTable.scss'
 
 const MainContainer = () => {
-  const [activeComponent, setActiveComponent] = useState< "BROWSE" | "PICK" | null>(null);
+  const [activeComponent, setActiveComponent] = useState< "BROWSE" | "PICK" | null>("BROWSE");
 
   return (
     <div className="container">
