@@ -1,51 +1,49 @@
-import { useState } from "react";
-import "../style/SearchBar.scss";
+import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useCharacterContext } from "../hooks/CharacterContext";
 
-const SearchBar = () => {
+const SearchCharacter = () => {
   const [searchId, setSearchId] = useState<string>("");
+  // const { setCharacterData } = useCharacterContext();
 
-  const { data: character, refetch } = useQuery({
+  const { refetch } = useQuery({
     queryKey: ["character", searchId],
     queryFn: async () => {
       if (!searchId) return null;
-      const response = await axios.get(
-        `https://rickandmortyapi.com/api/character/${searchId}`
-      );
+
+      let response;
+      if (/^\d+$/.test(searchId)) {
+        response = await axios.get(`https://rickandmortyapi.com/api/character/${searchId}`);
+      } else {
+        response = await axios.get(`https://rickandmortyapi.com/api/character/?name=${searchId}`);
+      }
+
       return response.data;
     },
     enabled: false,
+    // onSuccess: (data) => {
+    //   setCharacterData(data); // שמור את התוצאה בקונטקסט
+    // },
   });
 
-  const handleSearch = async () => {
-    if (searchId) {
-      await refetch();
-      setSearchId("");
-    } else {
-      console.error("Please enter a character ID.");
+  const handleSearch = () => {
+    if (searchId.trim() !== "") {
+      refetch();
     }
   };
 
   return (
-    <div className="main_search_container">
-      <div className="search_container">
-        <span className="search_icon"></span>
-        <input
-          type="text"
-          className="search_input"
-          placeholder="Search for character I.d"
-          value={searchId}
-          onChange={(e) => setSearchId(e.target.value)}
-        />
-        <div>
-          <button onClick={handleSearch} className="search_button">
-            Go
-          </button>
-        </div>
-      </div>
+    <div>
+      <input
+        type="text"
+        value={searchId}
+        onChange={(e) => setSearchId(e.target.value)}
+        placeholder="Enter ID or Name"
+      />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };
 
-export default SearchBar;
+export default SearchCharacter;

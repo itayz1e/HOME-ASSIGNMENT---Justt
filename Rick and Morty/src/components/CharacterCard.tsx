@@ -3,8 +3,15 @@ import BigRow from "./BigRow";
 import ArrowIcon from "../assets/ArrowIcon";
 import TableBar from "./TableBar";
 import noSearch from "../assets/Group 204.png";
+import { useCharacterContext } from "../hooks/CharacterContext";
 
 const CharacterCard = () => {
+  const { characterData } = useCharacterContext();
+
+  if (!characterData) {
+    return <div>No character selected</div>;
+  }
+
   return (
     <div>
       <div className="table">
@@ -12,7 +19,7 @@ const CharacterCard = () => {
           tbody={
             <>
               <tr>
-                <td>ID</td>
+                {/* <td>{characterData.name}</td> */}
                 <td>NAME</td>
                 <td>species</td>
                 <td>status</td>
