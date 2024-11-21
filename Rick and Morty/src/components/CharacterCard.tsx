@@ -3,7 +3,6 @@ import BigRow from "./BigRow";
 import ArrowIcon from "../assets/ArrowIcon";
 import TableBar from "./TableBar";
 import noSearch from "../assets/Group 204.png";
-import noSearchText from "../assets/Search for a character i.d in order to view a character.png";
 import { useCharacterContext } from "../hooks/CharacterContext";
 
 const CharacterCard = () => {
@@ -16,48 +15,50 @@ const CharacterCard = () => {
     );
   };
 
-  if (!characterData) {
-    return(
-
+  if (!characterData || characterData.length === 0) {
+    return (
       <td colSpan={8} className="no-results">
-    <div className="noSearch">
-      <img src={noSearch} alt="No results" />
-      <h1>Search for a character</h1>
-      </div>
-  </td>
+        <div className="noSearch">
+          <img src={noSearch} alt="No results" />
+          <h1>Search for a character</h1>
+        </div>
+      </td>
     );
   }
 
   return (
     <div>
       <div className="table">
-        
-          <TableBar
-            tbody={
-              <>
-                <tr>
-                  <td>{characterData?.id}</td>
-                  <td>{characterData?.name}</td>
-                  <td>{characterData?.species}</td>
-                  <td>{characterData?.status}</td>
-                  <td>{characterData?.origin.name}</td>
-                  <td>{characterData?.gender}</td>
-                  <td>
-                  <button onClick={() => toggleExpand(characterData.id)}>
+        <TableBar
+          tbody={
+            <>
+              {characterData.map((character) => (
+                <React.Fragment key={character.id}>
+                  <tr>
+                    <td>{character.id}</td>
+                    <td>{character.name}</td>
+                    <td>{character.species}</td>
+                    <td>{character.status}</td>
+                    <td>{character.origin.name}</td>
+                    <td>{character.gender}</td>
+                    <td>
+                      <button onClick={() => toggleExpand(character.id)}>
                         <ArrowIcon />
                       </button>
-                  </td>
-                </tr>
-                {expandedCharacters.includes(characterData.id) && (
+                    </td>
+                  </tr>
+                  {expandedCharacters.includes(character.id) && (
                     <tr className="expanded-row">
                       <td colSpan={7}>
-                        <BigRow character={characterData} />
+                        <BigRow character={character} />
                       </td>
                     </tr>
                   )}
-              </>
-            }
-          />
+                </React.Fragment>
+              ))}
+            </>
+          }
+        />
       </div>
     </div>
   );

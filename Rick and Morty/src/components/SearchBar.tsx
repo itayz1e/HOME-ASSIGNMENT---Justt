@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import "../style/SearchBar.scss";
@@ -17,8 +17,12 @@ const SearchCharacter = () => {
         ? `https://rickandmortyapi.com/api/character/${search}`
         : `https://rickandmortyapi.com/api/character/?name=${search}`;
       const response = await axios.get(url);
-      setCharacterData(response.data);
-      return response.data.results ? response.data.results[0] : response.data;
+      if (response.data.results) {
+        setCharacterData(response.data.results);
+        return response.data.results;
+      }
+      setCharacterData([response.data]);
+      return [response.data];
     },
     enabled: false,
   });

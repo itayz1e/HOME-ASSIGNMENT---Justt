@@ -24,4 +24,3 @@ const TableBar: React.FC<TableBarProps> = ({ tbody }) => {
 };
 
 export default TableBar;
-

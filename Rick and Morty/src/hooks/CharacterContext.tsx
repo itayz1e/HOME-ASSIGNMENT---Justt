@@ -1,7 +1,5 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
-
-
 export interface Character {
   id: number;
   name: string;
@@ -21,22 +19,25 @@ export interface Character {
   episode: string[];
   url: string;
   created: string;
-};
-
-
-export interface CharacterContextType {
-  characterData: Character | null;
-  setCharacterData: React.Dispatch<React.SetStateAction<Character | null>>;
 }
 
-const CharacterContext = createContext<CharacterContextType | undefined>(undefined);
+export interface CharacterContextType {
+  characterData: Character[];
+  setCharacterData: React.Dispatch<React.SetStateAction<Character[]>>;
+}
 
 interface CharacterProviderProps {
   children: ReactNode;
 }
 
-export const CharacterProvider: React.FC<CharacterProviderProps> = ({ children }) => {
-  const [characterData, setCharacterData] = useState<Character | null>(null);
+const CharacterContext = createContext<CharacterContextType | undefined>(
+  undefined
+);
+
+export const CharacterProvider: React.FC<CharacterProviderProps> = ({
+  children,
+}) => {
+  const [characterData, setCharacterData] = useState<Character[]>([]);
 
   const contextValue: CharacterContextType = {
     characterData,
@@ -53,7 +54,9 @@ export const CharacterProvider: React.FC<CharacterProviderProps> = ({ children }
 export const useCharacterContext = (): CharacterContextType => {
   const context = useContext(CharacterContext);
   if (!context) {
-    throw new Error("useCharacterContext must be used within a CharacterProvider");
+    throw new Error(
+      "useCharacterContext must be used within a CharacterProvider"
+    );
   }
   return context;
 };
