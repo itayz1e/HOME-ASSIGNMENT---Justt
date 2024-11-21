@@ -7,29 +7,25 @@ import { useCharacterContext } from "../hooks/CharacterContext";
 const SearchCharacter = () => {
   const [search, setSearch] = useState<string>("");
   const { setCharacterData } = useCharacterContext();
-  
+
   const { refetch } = useQuery({
     queryKey: ["character", search],
     queryFn: async () => {
       if (!search) return null;
-      
+
       const url = /^\d+$/.test(search)
-      ? `https://rickandmortyapi.com/api/character/${search}`
-      : `https://rickandmortyapi.com/api/character/?name=${search}`;
+        ? `https://rickandmortyapi.com/api/character/${search}`
+        : `https://rickandmortyapi.com/api/character/?name=${search}`;
       const response = await axios.get(url);
-      console.log(response.data);
+      setCharacterData(response.data);
       return response.data.results ? response.data.results[0] : response.data;
     },
     enabled: false,
   });
-  
+
   const handleSearch = async () => {
     if (search.trim() !== "") {
-      const data = await refetch();
-      if (data) {
-        setCharacterData(data?.data);
-        console.log(data?.data);
-      }
+      await refetch();
       setSearch("");
     }
   };
@@ -44,7 +40,9 @@ const SearchCharacter = () => {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Enter ID or Name"
         />
-        <button onClick={handleSearch} className="search_button">Go</button>
+        <button onClick={handleSearch} className="search_button">
+          Go
+        </button>
       </div>
     </div>
   );

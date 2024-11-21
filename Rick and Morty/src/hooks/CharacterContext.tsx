@@ -1,4 +1,3 @@
-// CharacterContext.tsx
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
 export interface Character {
@@ -13,7 +12,7 @@ export interface Character {
 
 
 export interface CharacterContextType {
-  characterData: Character | null;  // הוספנו את התכונה Character במקום string
+  characterData: Character | null;
   setCharacterData: React.Dispatch<React.SetStateAction<Character | null>>;
 }
 
