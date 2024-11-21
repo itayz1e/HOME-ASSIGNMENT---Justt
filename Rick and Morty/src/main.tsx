@@ -3,16 +3,16 @@ import { createRoot } from "react-dom/client";
 // import './index.css'
 import App from "./App.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { CharacterProvider } from "./hooks/CharacterContext.ts";
+import { CharacterProvider } from "./hooks/CharacterContext.tsx";
 
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <CharacterProvider>
+    <CharacterProvider>
+      <QueryClientProvider client={queryClient}>
         <App />
-      </CharacterProvider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </CharacterProvider>
   </StrictMode>
 );
