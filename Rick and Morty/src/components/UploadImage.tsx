@@ -1,11 +1,11 @@
 import "../style/UploadImage.scss";
-import upLoading from "../assets/images/Group 1.png";
+import upload from "../assets/images/Group 1.png";
 
 const UploadImage= () => {
   return (
-    <div className="upLoading">
+    <div className="upload">
       <div className="image">
-        <img src={upLoading} alt="" />
+        <img src={upload} alt="" />
       </div>
     </div>
   );

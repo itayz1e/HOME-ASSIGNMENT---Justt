@@ -91,3 +91,25 @@ table {
 
   
 }
+
+
+
+@media screen and (max-width: 576px) {
+  /* Extra small devices (phones, less than 576px) */
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  /* Small devices (tablets, 576px to 768px) */
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Medium devices (small laptops, 768px to 992px) */
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Large devices (laptops/desktops, 992px to 1200px) */
+}
+
+@media screen and (min-width: 1200px) {
+  /* Extra large devices (large desktops, 1200px and above) */
+}
