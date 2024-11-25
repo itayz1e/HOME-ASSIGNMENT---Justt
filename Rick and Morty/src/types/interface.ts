@@ -34,3 +34,7 @@ export interface PaginationControlsProps {
   onNext: () => void;
   onPrev: () => void;
 }
+
+export interface SearchBarProps {
+  onSwitchComponent: (component: "BROWSE" | "PICK") => void;
+}
