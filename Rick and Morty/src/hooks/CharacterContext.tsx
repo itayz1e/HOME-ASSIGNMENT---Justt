@@ -1,34 +1,6 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { Character, CharacterContextType, CharacterProviderProps } from "../types/interface";
 
-export interface Character {
-  id: number;
-  name: string;
-  status: "Alive" | "Dead" | "unknown";
-  species: string;
-  type: string;
-  gender: "Female" | "Male" | "Genderless" | "unknown";
-  origin: {
-    name: string;
-    url: string;
-  };
-  location: {
-    name: string;
-    url: string;
-  };
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
-}
-
-export interface CharacterContextType {
-  characterData: Character[];
-  setCharacterData: React.Dispatch<React.SetStateAction<Character[]>>;
-}
-
-interface CharacterProviderProps {
-  children: ReactNode;
-}
 
 const CharacterContext = createContext<CharacterContextType | undefined>(
   undefined
