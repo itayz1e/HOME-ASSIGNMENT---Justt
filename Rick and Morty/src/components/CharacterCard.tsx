@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BigRow from "./BigRow";
-import ArrowIcon from "../assets/ArrowIcon";
+import ArrowIcon from "../assets/DownArrowIcon";
 import TableBar from "./TableBar";
 import noSearch from "../assets/images/Group 204.png";
 import { useCharacterContext } from "../hooks/CharacterContext";
