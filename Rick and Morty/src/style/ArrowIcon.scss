@@ -7,13 +7,16 @@
     border-radius: 50%;
   }
   
-  button {
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+  .pagination-controls{
 
-  button:focus {
-    outline: none;
+    button {
+      background: none;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    button:focus {
+      outline: none;
+    }
   }

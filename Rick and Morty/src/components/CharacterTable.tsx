@@ -3,8 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import ArrowIcon from "../assets/ArrowIcon";
 import "../style/CharacterTable.scss";
-import noSearch from "../assets/Group 204.png";
-import noSearchText from "../assets/Search for a character i.d in order to view a character.png";
+import noSearch from "../assets/images/Group 204.png";
 import { Character } from "../types/interface";
 import BigRow from "./BigRow";
 import TableBar from "./TableBar";
@@ -73,8 +72,8 @@ const CharacterTable = () => {
                 <td colSpan={8} className="no-results">
                   <div className="noSearch">
                     <img src={noSearch} alt="No results" />
-                    <img src={noSearchText} alt="Search prompt" />
-                  </div>
+                    <h1>Search for a character</h1>
+                    </div>
                 </td>
               </tr>
             ) : (
