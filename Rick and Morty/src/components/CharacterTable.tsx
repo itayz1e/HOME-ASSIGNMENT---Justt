@@ -8,9 +8,13 @@ import noSearchText from "../assets/Search for a character i.d in order to view 
 import { Character } from "../types/interface";
 import BigRow from "./BigRow";
 import TableBar from "./TableBar";
+import PaginationControls from "./PaginationControls";
 
 const CharacterTable = () => {
   const [expandedCharacters, setExpandedCharacters] = useState<number[]>([]);
+  const [page, setPage] = useState(1);
+  const totalPages = 10;
+
 
   const toggleExpand = (id: number) => {
     setExpandedCharacters((prev) =>
@@ -36,6 +40,13 @@ const CharacterTable = () => {
 
   return (
     <div className="table">
+      <PaginationControls
+  currentPage={page}
+  totalPages={totalPages}
+  onNext={() => setPage((prev) => prev + 1)}
+  onPrev={() => setPage((prev) => prev - 1)}
+/>
+
       {isLoading ? (
         <tr>
           <td colSpan={7} className="no-results">
