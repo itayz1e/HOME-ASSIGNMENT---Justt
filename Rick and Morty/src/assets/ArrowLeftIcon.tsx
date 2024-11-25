@@ -1,7 +1,6 @@
 import '../style/ArrowIcon.scss'
 
-
-const ArrowIcon = () => {
+const ArrowLeftIcon = () => {
   return (
     <div className="arrow-icon">
       <svg
@@ -11,10 +10,10 @@ const ArrowIcon = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M12 16L6 10H18L12 16Z" fill="currentColor" />
+        <path d="M16 6L10 12L16 18" fill="none" stroke="currentColor" strokeWidth="2" />
       </svg>
     </div>
   );
 };
 
-export default ArrowIcon;
+export default ArrowLeftIcon;

@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import ArrowIcon from "../assets/ArrowIcon";
+import DownArrowIcon from "../assets/DownArrowIcon";
 import "../style/CharacterTable.scss";
-import noSearch from "../assets/Group 204.png";
-import noSearchText from "../assets/Search for a character i.d in order to view a character.png";
-import { Character } from "../types/interface";
+import noSearch from "../assets/images/Group 204.png";
 import BigRow from "./BigRow";
 import TableBar from "./TableBar";
+import PaginationControls from "./PaginationControls";
+import { Character } from "../types/interface";
 
 const CharacterTable = () => {
   const [expandedCharacters, setExpandedCharacters] = useState<number[]>([]);
+  const [page, setPage] = useState(1);
+  const totalPages = 42;
 
   const toggleExpand = (id: number) => {
     setExpandedCharacters((prev) =>
@@ -18,42 +20,38 @@ const CharacterTable = () => {
     );
   };
 
-  const {
-    data: characters = [],
-    isLoading,
-    error,
-  } = useQuery<Character[]>({
-    queryKey: ["characters"],
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["characters", page],
     queryFn: async () => {
       const response = await axios.get(
-        "https://rickandmortyapi.com/api/character"
+        `https://rickandmortyapi.com/api/character/?page=${page}`
       );
       return response.data.results;
     },
   });
 
-  const displayedCharacters = characters;
+  
+  const displayedCharacters = data || [];
 
   return (
     <div className="table">
+      <PaginationControls
+        currentPage={page}
+        totalPages={totalPages}
+        onNext={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+        onPrev={() => setPage((prev) => Math.max(prev - 1, 1))}
+      />
+
       {isLoading ? (
-        <tr>
-          <td colSpan={7} className="no-results">
-            <div>
-              <img src={noSearch} alt="No results" />
-              <h1>Loading...</h1>
-            </div>
-          </td>
-        </tr>
+        <div className="no-results">
+          <img src={noSearch} alt="No results" />
+          <h1>Loading...</h1>
+        </div>
       ) : error ? (
-        <tr>
-          <td colSpan={7} className="no-results">
-            <div>
-              <img src={noSearch} alt="No results" />
-              <h1>Search for a character</h1>
-            </div>
-          </td>
-        </tr>
+        <div className="no-results">
+          <img src={noSearch} alt="No results" />
+          <h1>Error loading characters</h1>
+        </div>
       ) : (
         <TableBar
           tbody={
@@ -62,12 +60,12 @@ const CharacterTable = () => {
                 <td colSpan={8} className="no-results">
                   <div className="noSearch">
                     <img src={noSearch} alt="No results" />
-                    <img src={noSearchText} alt="Search prompt" />
+                    <h1>No characters found</h1>
                   </div>
                 </td>
               </tr>
             ) : (
-              displayedCharacters.map((character) => (
+              displayedCharacters.map((character: Character) => (
                 <>
                   <tr key={character.id}>
                     <td>{character.id}</td>
@@ -78,7 +76,7 @@ const CharacterTable = () => {
                     <td>{character.gender || "-"}</td>
                     <td>
                       <button onClick={() => toggleExpand(character.id)}>
-                        <ArrowIcon />
+                        <DownArrowIcon />
                       </button>
                     </td>
                   </tr>

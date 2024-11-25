@@ -27,3 +27,10 @@ export interface Character {
   url: string;
   created: string;
 };
+
+export interface PaginationControlsProps {
+  currentPage: number;
+  totalPages: number;
+  onNext: () => void;
+  onPrev: () => void;
+}

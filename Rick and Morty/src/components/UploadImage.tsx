@@ -1,5 +1,5 @@
 import "../style/UploadImage.scss";
-import upLoading from "../assets/Group 1.png";
+import upLoading from "../assets/images/Group 1.png";
 
 const UploadImage= () => {
   return (
