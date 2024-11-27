@@ -1,6 +1,6 @@
 import "./style/App.scss";
 import UploadImage from "./components/UploadImage";
-import JusttLogo from "./components/JusttLogo";
+import Logo from "./components/Logo";
 import MainContainer from "./components/MainContainer";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <UploadImage />
         </div>
         <div>
-          <JusttLogo />
+          <Logo />
         </div>
         <div>
           <MainContainer />
