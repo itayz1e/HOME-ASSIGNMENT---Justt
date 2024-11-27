@@ -1,10 +1,9 @@
 .logo {
   width: 200px;
   height: 200px;
-  top: 174px;
-  left: 840px;
+  margin-top: -150px;
+  margin-right: 3rem;
   gap: 0px;
-  position: absolute;
 }
 
 
@@ -12,9 +11,8 @@
   .logo {
     width: 100px;
     height: 200px;
-    position: absolute;
-    top: 174px;
-    left: 5.5rem;
+    margin-top: -150px;
+    margin-right: 10rem;
   }
 }
 
@@ -22,9 +20,8 @@
   .logo {
     width: 100px;
     height: 200px;
-    position: absolute;
-    top: 174px;
-    left: 25rem;
+    margin-top: -150px;
+    margin-right: 10rem;
   }
 }
 

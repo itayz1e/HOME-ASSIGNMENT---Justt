@@ -1,3 +1,9 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .fullPage {
   width: 1920px;
   top: -770px;
@@ -24,6 +30,7 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+
   .fullPage {
     width: 100%;
     height: 100%;
