@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface SearchBarProps {
   searchText: string;
 }
@@ -33,4 +35,17 @@ export interface PaginationControlsProps {
   totalPages: number;
   onNext: () => void;
   onPrev: () => void;
+}
+
+export interface SearchBarProps {
+  onSwitchComponent: (component: "BROWSE" | "PICK") => void;
+}
+
+export interface CharacterContextType {
+  characterData: Character[];
+  setCharacterData: React.Dispatch<React.SetStateAction<Character[]>>;
+}
+
+export interface CharacterProviderProps {
+  children: ReactNode;
 }

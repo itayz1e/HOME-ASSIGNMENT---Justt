@@ -1,5 +1,5 @@
 table {
-  width: 1364px;
+  width: 100%;
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -86,8 +86,57 @@ table {
     text-align: center;
     padding: 20px;
     color: rgba(161, 161, 161, 1);
-
   }
-
-  
 }
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+  table {
+
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  table {
+
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  table {
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
+
+// @media screen and (min-width: 1200px) and (max-width:1300px) {
+//   table {
+//     width: 70rem;
+//     td {
+//       font-size: x-small;
+//     }
+    
+//     th {
+//       color: red;
+//       font-size: small;
+//     }
+//   }
+// }

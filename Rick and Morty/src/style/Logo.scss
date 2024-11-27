@@ -6,3 +6,25 @@
   gap: 0px;
   position: absolute;
 }
+
+
+@media screen and (min-width: 350px) and (max-width: 670px) {
+  .logo {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top: 174px;
+    left: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 1200px) {
+  .logo {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top: 174px;
+    left: 25rem;
+  }
+}
+

@@ -3,8 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import "../style/SearchBar.scss";
 import { useCharacterContext } from "../hooks/CharacterContext";
+import { SearchBarProps } from "../types/interface";
 
-const SearchCharacter = () => {
+
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSwitchComponent }) => {
   const [search, setSearch] = useState<string>("");
   const { setCharacterData } = useCharacterContext();
 
@@ -29,10 +32,15 @@ const SearchCharacter = () => {
 
   const handleSearch = async () => {
     if (search.trim() !== "") {
-      await refetch();
+      const { data } = await refetch();
+
+      if (data) {
+        onSwitchComponent("PICK");
+      }
       setSearch("");
     }
   };
+
   return (
     <div className="main_search_container">
       <div className="search_container">
@@ -52,4 +60,4 @@ const SearchCharacter = () => {
   );
 };
 
-export default SearchCharacter;
+export default SearchBar;
