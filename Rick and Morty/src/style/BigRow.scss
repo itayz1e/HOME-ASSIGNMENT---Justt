@@ -161,33 +161,3 @@ strong {
     }
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .big_row {
-    flex-direction: column;
-  }
-
-  .character_image {
-    width: 50%;
-    height: 50%;
-  }
-
-  .header {
-    width: 18px;
-    height: 16px;
-  }
-
-  .character_details {
-    width: 90%;
-    height: 100%;
-  }
-
-  .details_grid {
-    gap: 0px;
-    margin-left: 30px;
-
-    p {
-      font-size: 10px;
-    }
-  }
-}
