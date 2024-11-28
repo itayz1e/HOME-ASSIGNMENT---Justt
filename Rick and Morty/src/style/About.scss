@@ -1,0 +1,33 @@
+.about-container {
+  text-align: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    color: #0a66c2;
+  }
+}
+
+.icon {
+  margin-bottom: 8px;
+}

@@ -49,3 +49,7 @@ export interface CharacterContextType {
 export interface CharacterProviderProps {
   children: ReactNode;
 }
+
+export type TableBarProps = {
+  tbody: React.ReactNode;
+};

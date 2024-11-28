@@ -1,7 +1,7 @@
 import "../style/UploadImage.scss";
 import upload from "../assets/images/Group 1.png";
 
-const UploadImage= () => {
+const UploadImage = () => {
   return (
     <div className="upload">
       <div className="image">
@@ -9,6 +9,6 @@ const UploadImage= () => {
       </div>
     </div>
   );
-}
+};
 
 export default UploadImage;

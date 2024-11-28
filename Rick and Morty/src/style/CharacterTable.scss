@@ -16,7 +16,7 @@ table {
     outline: none;
   }
   th,
-  td {
+  y td {
     width: 126px;
     height: 48px;
     gap: 0px;
@@ -91,7 +91,6 @@ table {
 
 @media screen and (min-width: 360px) and (max-width: 576px) {
   table {
-
     td {
       font-size: x-small;
     }
@@ -104,7 +103,6 @@ table {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   table {
-
     td {
       font-size: x-small;
     }
@@ -126,17 +124,3 @@ table {
     }
   }
 }
-
-// @media screen and (min-width: 1200px) and (max-width:1300px) {
-//   table {
-//     width: 70rem;
-//     td {
-//       font-size: x-small;
-//     }
-    
-//     th {
-//       color: red;
-//       font-size: small;
-//     }
-//   }
-// }

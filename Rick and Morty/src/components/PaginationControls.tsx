@@ -23,7 +23,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
         className="next-button"
       >
         <div className="arrow-icon">
-        <ArrowRightIcon />
+          <ArrowRightIcon />
         </div>
       </button>
     </div>
