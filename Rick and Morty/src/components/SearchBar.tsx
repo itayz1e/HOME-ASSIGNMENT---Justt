@@ -5,8 +5,6 @@ import "../style/SearchBar.scss";
 import { useCharacterContext } from "../hooks/CharacterContext";
 import { SearchBarProps } from "../types/interface";
 
-
-
 const SearchBar: React.FC<SearchBarProps> = ({ onSwitchComponent }) => {
   const [search, setSearch] = useState<string>("");
   const { setCharacterData } = useCharacterContext();

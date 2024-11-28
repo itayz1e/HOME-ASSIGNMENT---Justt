@@ -30,7 +30,6 @@ const CharacterTable = () => {
     },
   });
 
-  
   const displayedCharacters = data || [];
 
   return (

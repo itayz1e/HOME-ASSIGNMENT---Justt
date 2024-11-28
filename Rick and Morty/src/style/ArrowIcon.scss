@@ -1,43 +1,21 @@
 .arrow-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-  }
-  
-  .pagination-controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
 
-    button {
-      background: none;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-    
-    button:focus {
-      outline: none;
-    }
+.pagination-controls {
+  button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
   }
 
-
-  @media screen and (max-width: 576px) {
-    /* Extra small devices (phones, less than 576px) */
+  button:focus {
+    outline: none;
   }
-  
-  @media screen and (min-width: 576px) and (max-width: 768px) {
-    /* Small devices (tablets, 576px to 768px) */
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 992px) {
-    /* Medium devices (small laptops, 768px to 992px) */
-  }
-  
-  @media screen and (min-width: 992px) and (max-width: 1200px) {
-    /* Large devices (laptops/desktops, 992px to 1200px) */
-  }
-  
-  @media screen and (min-width: 1200px) {
-    /* Extra large devices (large desktops, 1200px and above) */
-  }
+}

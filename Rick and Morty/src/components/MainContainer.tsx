@@ -7,7 +7,9 @@ import CharacterCard from "./CharacterCard";
 import "../style/CharacterTable.scss";
 
 const MainContainer = () => {
-  const [activeComponent, setActiveComponent] = useState<"BROWSE" | "PICK" | null>("BROWSE");
+  const [activeComponent, setActiveComponent] = useState<
+    "BROWSE" | "PICK" | null
+  >("BROWSE");
 
   const handleSwitchComponent = (component: "BROWSE" | "PICK") => {
     setActiveComponent(component);
@@ -22,7 +24,7 @@ const MainContainer = () => {
         />
       </div>
       <div>
-        <SearchBar onSwitchComponent={handleSwitchComponent} searchText={""}  />
+        <SearchBar onSwitchComponent={handleSwitchComponent} searchText={""} />
       </div>
       <div className="box-content">
         {activeComponent === "BROWSE" && <CharacterTable />}

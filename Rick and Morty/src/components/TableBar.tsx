@@ -1,8 +1,4 @@
-import "../style/CharacterCard.scss";
-
-type TableBarProps = {
-  tbody: React.ReactNode;
-};
+import { TableBarProps } from "../types/interface";
 
 const TableBar: React.FC<TableBarProps> = ({ tbody }) => {
   return (
