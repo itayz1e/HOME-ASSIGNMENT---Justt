@@ -1,0 +1,21 @@
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.pagination-controls {
+  button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: none;
+  }
+}

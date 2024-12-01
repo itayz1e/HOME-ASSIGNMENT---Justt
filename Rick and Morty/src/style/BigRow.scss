@@ -1,0 +1,163 @@
+.big_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.character_image {
+  width: 354px;
+  height: 361px;
+  border-radius: 10px;
+  border: 5px solid rgba(67, 16, 174, 1);
+}
+
+.header {
+  width: 186px;
+  height: 16px;
+  top: 827px;
+  left: 782px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.character_details {
+  width: 860px;
+  height: 361px;
+  top: 792px;
+  left: 732px;
+  gap: 0px;
+  border-radius: 10.26px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  color: rgba(67, 16, 174, 1);
+  background: linear-gradient(
+    241.25deg,
+    #f9f7ff 4.4%,
+    rgba(255, 255, 255, 0.53) 119.94%
+  );
+  box-shadow: -10px 10px 20px rgba(67, 16, 174, 0.12);
+  backdrop-filter: blur(13px);
+
+  border-radius: 10.2556px;
+}
+
+strong {
+  color: gray;
+}
+
+.character_details h5 {
+  margin-left: 20px;
+}
+
+.details_grid {
+  gap: 0px;
+  opacity: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 60px;
+  width: 100%;
+  margin: 0;
+  text-align: start;
+  margin-left: 55px;
+
+  p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+  .big_row {
+    flex-direction: column;
+  }
+
+  .character_image {
+    width: 50%;
+    height: 50%;
+  }
+
+  .header {
+    width: 18px;
+    height: 16px;
+  }
+
+  .character_details {
+    width: 90%;
+    height: 100%;
+  }
+
+  .details_grid {
+    gap: 0px;
+    margin-left: 30px;
+
+    p {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .big_row {
+    flex-direction: column;
+  }
+  .character_details h5 {
+    margin-left: 25px;
+    font-size: 10px;
+  }
+
+  .header {
+    width: 18px;
+    height: 16px;
+  }
+
+  .character_details {
+    width: 90%;
+    height: 100%;
+  }
+
+  .details_grid {
+    gap: 0px;
+    margin-left: 75px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .big_row {
+    flex-direction: column;
+  }
+
+  .character_image {
+    width: 50%;
+    height: 50%;
+  }
+
+  .header {
+    width: 18px;
+    height: 16px;
+  }
+
+  .character_details {
+    width: 90%;
+    height: 100%;
+  }
+
+  .details_grid {
+    gap: 0px;
+    margin-left: 30px;
+
+    p {
+      font-size: 10px;
+    }
+  }
+}

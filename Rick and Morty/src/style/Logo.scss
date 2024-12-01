@@ -1,0 +1,30 @@
+.logo {
+  width: 200px;
+  height: 200px;
+  margin-top: -150px;
+  margin-right: 0rem;
+  gap: 0px;
+  .image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 670px) {
+  .logo {
+    width: 100px;
+    height: 200px;
+    margin-top: -150px;
+    margin-right: 7rem;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 1200px) {
+  .logo {
+    width: 100px;
+    height: 200px;
+    margin-top: -150px;
+    margin-right: 7rem;
+  }
+}

@@ -1,0 +1,126 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(239, 239, 244, 1);
+
+  button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: none;
+  }
+  th,
+  y td {
+    width: 126px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  th {
+    background-color: rgba(32, 0, 98, 1);
+    color: #ffffff;
+  }
+
+  tr:nth-child(even) {
+    background: rgba(245, 240, 255, 1);
+  }
+  tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  tr {
+    text-align: center;
+  }
+
+  td:nth-child(1) {
+    width: 126px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(2) {
+    width: 199px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(3) {
+    width: 119px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(4) {
+    width: 362px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(5) {
+    width: 223px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(6) {
+    width: 244px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  td:nth-child(7) {
+    width: 91px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 20px;
+    color: rgba(161, 161, 161, 1);
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+  table {
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  table {
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  table {
+    td {
+      font-size: x-small;
+    }
+
+    th {
+      font-size: small;
+    }
+  }
+}
